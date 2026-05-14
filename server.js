@@ -29,7 +29,7 @@ const server = http.createServer((req, res) => {
 // Поддержка HTTPS CONNECT
 server.on('connect', (req, clientSocket, head) => {
   const auth = req.headers['proxy-authorization'];
-  if (!auth || auth !== 'Basic ' + Buffer.from('user:password').toString('base64')) {
+  if (!auth || auth !== 'Basic ' + Buffer.from('fjfjjgjgkgMrmfmfn:aB7$kL2#dQ9').toString('base64')) {
     clientSocket.write('HTTP/1.1 407 Proxy Authentication Required\r\nProxy-Authenticate: Basic realm="Proxy"\r\n\r\n');
     clientSocket.end();
     return;
